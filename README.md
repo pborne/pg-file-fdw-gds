@@ -9,9 +9,9 @@ Hadoop integration. The changes are still in Beta form.
 To get started on using file_fdw on Hadoop, please see our documentation page on
 http://citusdata.com/docs/sql-on-hadoop! If you'd like to simply use file_fdw on
 distributed files instead, please check out
-http://citusdata.com/docs/foreign-data. Finally, for a performance comparison,
-see our blog post at
-http://citusdata.com/blog/50-postgresql-foreign-file-performance
+http://citusdata.com/docs/foreign-data. Finally, you can find a performance
+evaluation of foreign data wrappers on our [blog
+post](http://citusdata.com/blog/50-postgresql-foreign-file-performance).
 
 Building
 --------

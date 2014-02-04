@@ -1,8 +1,8 @@
 file_fdw (Hadoop)
 =================
 
-Hadoop file_fdw is a slightly modified version of PostgreSQL 9.2's [file_fdw
-module](http://www.postgresql.org/docs/9.2/static/file-fdw.html). This module
+Hadoop file_fdw is a slightly modified version of PostgreSQL 9.3's [file_fdw
+module](http://www.postgresql.org/docs/9.3/static/file-fdw.html). This module
 extends on the original file_fdw to make it compatible with CitusDB's native
 Hadoop integration. The changes are still in Beta form.
 
@@ -22,8 +22,8 @@ scratch on POSIX compliant systems (Linux and OS X), you need to include the
 pg_config directory path in your make command. This path is typically the same
 as your CitusDB installation's bin/ directory path. For example:
 
-    PATH=/opt/citusdb/2.0/bin/:$PATH make USE_PGXS=1
-    sudo PATH=/opt/citusdb/2.0/bin/:$PATH make USE_PGXS=1 install
+    PATH=/opt/citusdb/3.0/bin/:$PATH make USE_PGXS=1
+    sudo PATH=/opt/citusdb/3.0/bin/:$PATH make USE_PGXS=1 install
 
 Changes
 -------
@@ -41,8 +41,7 @@ certain threshold.
 Third, CitusDB currently associates one HDFS block with one foreign table, and
 executes the entire SQL query locally on that block. If bytes for the last
 record in an HDFS block spill over to the next one, we currently don't fetch
-those bytes and instead skip the last record. This is a limitation we intend to
-fix in CitusDB 2.1.
+those bytes and instead skip the last record.
 
 For all types of questions and comments about CitusDB's Hadoop integration or
 our changes to this wrapper, please contact us at http://citusdata.com/contact
